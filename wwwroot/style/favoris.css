@@ -1,0 +1,30 @@
+.favoris-container {
+    margin-top: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    background-color: var(--color-3);
+    width: 90%;
+    border-radius: 10px;
+}
+
+img {
+    max-width: 20vw;
+}
+
+.table {
+    border-radius: 20px;
+    border: none;
+}
+
+th {
+    border: none !important;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: grey;
+}

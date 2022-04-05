@@ -1,0 +1,153 @@
+.content {
+    margin-top: 30px;
+}
+
+.item {
+    margin-top: 10px;
+}
+
+.card {
+    border: 2px solid black;
+    transition: .2s;
+}
+
+h1 {
+    font-size: 17pt
+}
+
+#search-button {
+    margin-top: 10px;
+}
+
+.card-body {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card:hover .card-body {
+    background-color: rgb(197, 197, 197);
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.zone-recherche {
+    background-color: white;
+    padding: 10px;
+    margin-top: 12px;
+    border-radius: 10px;
+}
+
+#search-bar {
+    width: 100%;
+}
+
+#search-bar-container {
+    padding-bottom: 10px;
+}
+
+#checklists {
+    margin: 0px;
+    padding-bottom: 10px;
+}
+
+.checklist-container {
+    padding-top: 10px;
+}
+
+.checklist-container p {
+    margin-bottom: 0px;
+}
+
+.checklist li {
+    list-style: none;
+}
+
+.checklist label {
+    margin-bottom: 0px;
+}
+
+.search-section {
+    border-bottom: 2px solid #dbdbdb;
+}
+
+#price {
+    margin-top: 10px;
+    padding-bottom: 5px;
+}
+
+#price-min {
+    width: 80px;
+}
+
+#price-max {
+    width: 80px;
+}
+
+.input-txt {
+    border-color: #dbdbdb;
+    border-style: solid;
+    border-radius: 10px;
+    line-height: 1.5;
+    transition: .2s;
+}
+
+.input-txt:hover {
+    border-color: hsl(240, 1%, 72%);
+}
+
+.input-txt:focus {
+    outline: none;
+    border-color: hsl(220, 90%, 56%);
+    box-shadow: 0 0 0 2px hsla(220, 90%, 56%, 0.2);
+}
+
+#premium-selector {
+    margin-top: 10px;
+}
+
+#button-container {
+    width: 100%;
+}
+
+#button-container button {
+    display: inline-flex;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(220, 90%, 56%);
+    border-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px hsla(220, 90%, 37%, 0.25);
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: .2s;
+}
+
+#button-container button:hover {
+    background-color: hsl(220, 90%, 50%);
+}
+
+#button-container button:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 2px hsla(220, 90%, 56%, 0.2);
+}
+
+ul {
+    padding-left: 10px;
+    margin-bottom: 0px;
+}
+
+i {
+    margin-left: 5px;
+}
+
+@media (min-width: 1700px) {
+    .col-xxl-6 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}

@@ -1,0 +1,144 @@
+#details-container {
+    margin-top: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    background-color: var(--color-3);
+    width: 90%;
+    border-radius: 10px;
+}
+
+.details-row {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main>p {
+    display: none;
+}
+
+
+/* #region Carousel */
+
+.carousel {
+    max-height: 100%;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.carousel-item.active {
+    display: flex;
+}
+
+.carousel-item {
+    height: 700px;
+    position: relative;
+}
+
+.carousel-item img {
+    max-width: 90%;
+    position: absolute;
+    max-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.carousel-control {
+    border: none;
+    background: transparent;
+    color: black;
+}
+
+.carousel-control-next,
+.carousel-control-prev,
+.carousel-indicators {
+    filter: invert(100%);
+    /* Applique un filtre visuel à l'élément auquel il est appliqué  */
+}
+
+#carousel-col {
+    padding-right: 0px;
+}
+
+
+/* #endregion */
+
+
+/* #region Details */
+
+.details,
+.description {
+    padding-top: 10px;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.description {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.details ul {
+    margin-top: 20px;
+    list-style: none;
+    margin-bottom: 75px;
+}
+
+.details li,
+.description p {
+    font-size: large;
+}
+
+.description p {
+    margin-left: 40px;
+    margin-right: 20px;
+    text-align: justify;
+}
+
+h3 {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.btn {
+    width: 150px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+
+/* #endregion */
+
+@media screen and (max-width: 992px) {
+    .carousel-item {
+        height: 400px;
+    }
+    #carousel-col {
+        padding: 0px;
+    }
+    @media screen and (min-width: 765px) {
+        ul {
+            -moz-column-count: 2;
+            -moz-column-gap: 50px;
+            -webkit-column-count: 2;
+            -webkit-column-gap: 50px;
+            column-count: 2;
+            /* Change le nombre de colonne que contient la liste */
+            column-gap: 50px;
+            /* Change la distance entre les colonnes de la liste */
+        }
+    }
+}
+
+#fixed-p {
+    position: fixed;
+    top: 100px;
+    right: 100px;
+}

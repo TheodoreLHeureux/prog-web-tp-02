@@ -1,0 +1,84 @@
+main {
+    padding: 0px;
+    padding-top: 20px;
+    width: 100%;
+}
+
+main .container-fluid {
+    padding: 0px;
+    margin: 0px;
+}
+
+.vendeurs-container a {
+    color: black;
+}
+
+.vendeurs-container a:-webkit-any-link {
+    color: black;
+    cursor: default;
+    text-decoration: none;
+}
+
+h1 {
+    color: lightgrey;
+}
+
+.vendeurs-container {
+    width: 100%;
+    padding: 10px;
+    padding-top: 20px;
+    margin: 0px;
+}
+
+.vendeur {
+    position: relative;
+    background-color: var(--color-3);
+    border: 5px solid black;
+    border-radius: 20px;
+    height: 600px;
+    justify-items: center;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.vendeur:hover {
+    transform: scale(1.08);
+}
+
+.vendeur-info {
+    position: absolute;
+    bottom: 10%;
+}
+
+.vendeur-info ul {
+    font-size: large;
+    padding-bottom: 5%;
+    padding-right: 30px;
+}
+
+.vendeur-info p {
+    text-align: center;
+    font-weight: bold;
+    width: 80%;
+    margin-left: 10%;
+}
+
+#gigabyte img {
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+
+#evga img {
+    padding-top: 50px;
+    padding-bottom: 90px;
+}
+
+span {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1600px) {
+    .vendeur {
+        height: 500px;
+    }
+}

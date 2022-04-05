@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/icon.png" media="(prefers-color-scheme:light)">
+    <link rel="icon" href="/images/icon-dark-theme.png" media="(prefers-color-scheme:dark)">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" crossorigin="anonymous" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" />
+    <link rel="stylesheet" type="text/css" href="/style/sitewide.css">
+    @RenderSection("Style", false)
+    <title>Accueil</title>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            if (!window.matchMedia)
+                return;
+
+            var current = $('head > link[rel="icon"][media]');
+            $.each(current, function (i, icon) {
+                var match = window.matchMedia(icon.media);
+
+                function swap() {
+                    if (match.matches) {
+                        current.remove();
+                        current = $(icon).appendTo('head');
+                    }
+                }
+                match.addListener(swap);
+                swap();
+            });
+        });
+    </script>
+    @RenderSection("Script", required: false)
+</head>
+
+<body>
+    <header class="container-fluid">
+        <nav class="navbar navbar-expand-md navbar-light">
+            <a href="/Home" class="navbar-brand">
+                <img class="img-fluid" src="/images/icon.png" alt="Icon" width="60">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ">
+                    <li class="nav-item mr-auto"><a class="nav-link" href="/Home">GPUSelector</a></li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="/Home">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Enfant/Recherche">Recherche</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Favoris">Favoris</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-fluid">
+        @RenderBody()
+    </main>
+
+    <footer class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col col-12 col-md-auto">
+                <h3>Liens Utiles</h3>
+                <ul>
+                    <li><a href="/Home">Accueil</a></li>
+                    <li><a href="/Recherche/Index">Recherche</a></li>
+                    <li><a href="/Favoris">Favoris</a></li>
+                </ul>
+            </div>
+            <div class="col col-12 col-md-auto">
+                <h3>Nous contacter</h3>
+                <ul>
+                    <li>Téléphone: 514-123-4567</li>
+                    <li>Courriel: support@gpuselector.com</li>
+                    <li>Twitter: @@GPUSelector</li>
+                </ul>
+            </div>
+            <div class="col col-12 col-md-auto">
+                <h3>Nos forces</h3>
+                <ul>
+                    <li>Rabais imbattables</li>
+                    <li>Politique de prix</li>
+                    <li>Politique de remboursement</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center ">
+                <h2>GPUSelector 2022</h2>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+
+</html>
