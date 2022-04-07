@@ -655,19 +655,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\2032422\\.nuget\\packages\\": {}
+    "C:\\Users\\theod\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\2032422\\OneDrive - Cégep Édouard-Montpetit\\Hiver 2022\\Programmation Web serveur\\prog-web-tp-2\\prog-web-tp-2.csproj",
+      "projectUniqueName": "C:\\Users\\theod\\OneDrive - Cégep Édouard-Montpetit\\Hiver 2022\\Programmation Web serveur\\prog-web-tp-2\\prog-web-tp-2.csproj",
       "projectName": "prog-web-tp-2",
-      "projectPath": "C:\\Users\\2032422\\OneDrive - Cégep Édouard-Montpetit\\Hiver 2022\\Programmation Web serveur\\prog-web-tp-2\\prog-web-tp-2.csproj",
-      "packagesPath": "C:\\Users\\2032422\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\2032422\\OneDrive - Cégep Édouard-Montpetit\\Hiver 2022\\Programmation Web serveur\\prog-web-tp-2\\obj\\",
+      "projectPath": "C:\\Users\\theod\\OneDrive - Cégep Édouard-Montpetit\\Hiver 2022\\Programmation Web serveur\\prog-web-tp-2\\prog-web-tp-2.csproj",
+      "packagesPath": "C:\\Users\\theod\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\theod\\OneDrive - Cégep Édouard-Montpetit\\Hiver 2022\\Programmation Web serveur\\prog-web-tp-2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\2032422\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\theod\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -716,7 +716,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
       }
     }
   }

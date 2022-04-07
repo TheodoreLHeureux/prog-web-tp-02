@@ -699,3 +699,7 @@ C:\Users\2032422\OneDrive - Cégep Édouard-Montpetit\Hiver 2022\Programmation W
 C:\Users\2032422\OneDrive - Cégep Édouard-Montpetit\Hiver 2022\Programmation Web serveur\prog-web-tp-2\obj\Debug\netcoreapp3.1\prog-web-tp-2.dll
 C:\Users\2032422\OneDrive - Cégep Édouard-Montpetit\Hiver 2022\Programmation Web serveur\prog-web-tp-2\obj\Debug\netcoreapp3.1\prog-web-tp-2.pdb
 C:\Users\2032422\OneDrive - Cégep Édouard-Montpetit\Hiver 2022\Programmation Web serveur\prog-web-tp-2\obj\Debug\netcoreapp3.1\prog-web-tp-2.genruntimeconfig.cache
+C:\Users\theod\OneDrive - Cégep Édouard-Montpetit\Hiver 2022\Programmation Web serveur\prog-web-tp-2\obj\Debug\netcoreapp3.1\Razor\Views\Enfant\Detail.cshtml.g.cs
+C:\Users\theod\OneDrive - Cégep Édouard-Montpetit\Hiver 2022\Programmation Web serveur\prog-web-tp-2\obj\Debug\netcoreapp3.1\Razor\Views\Enfant\Recherche.cshtml.g.cs
+C:\Users\theod\OneDrive - Cégep Édouard-Montpetit\Hiver 2022\Programmation Web serveur\prog-web-tp-2\obj\Debug\netcoreapp3.1\Razor\Views\Favoris\Index.cshtml.g.cs
+C:\Users\theod\OneDrive - Cégep Édouard-Montpetit\Hiver 2022\Programmation Web serveur\prog-web-tp-2\obj\Debug\netcoreapp3.1\Razor\Views\Enfant\PageNotFound.cshtml.g.cs

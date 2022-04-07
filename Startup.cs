@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using prog_web_tp_2.Models;
 
 namespace prog_web_tp_2
 {
@@ -16,10 +17,13 @@ namespace prog_web_tp_2
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().AddRazorRuntimeCompilation(); //Besoin d'inclure la biblioth�que : Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation
+            services.AddSingleton<FausseBaseDeDonnees>();
         }
+
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

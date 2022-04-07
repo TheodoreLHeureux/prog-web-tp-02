@@ -1,5 +1,16 @@
-﻿@{
+﻿@using prog_web_tp_2.Models;
+
+@model Enfant;
+
+@{
     Layout = "_Layout";
+    Enfant GPU = Model;
+
+    string getImgPath(int i)
+    {
+        return "/images/GPUs/" + GPU.Parent.Nom.Replace(' ', '-') + "/" + GPU.Nom.Replace(' ', '-') + "/" + GPU.Nom.Replace(' ', '-') + "-" + i.ToString() + ".jpg";
+    }
+
 }
 
 @section Style {
@@ -27,28 +38,29 @@
     </script>
 }
 
+
 <div class="container-fluid" id="details-container">
     <h1>Détails sur cette carte graphiques.</h1>
     <div class="row details-row">
         <!-- Details -->
         <div class="col-12 col-lg-4 col-xl-3 details">
-            <h3>GeForce RTX 3070 Vision OC</h3>
+            <h3>@(GPU.Nom)</h3>
             <ul>
-                <li><b>Fabricant:</b> Gigabyte</li>
-                <li><b>Chipset:</b> GeForce RTX 3070</li>
-                <li><b>Memory:</b> 8 GB</li>
-                <li><b>Memory Type:</b> GDDR6</li>
-                <li><b>Boost Clock:</b> 1815 MHz</li>
-                <li><b>Core Clock:</b> 1500 MHz</li>
-                <li><b>Length:</b> 286 mm</li>
-                <li><b>TDP:</b> 220 W</li>
-                <li><b>HDMI Ports:</b> 2</li>
-                <li><b>DP Ports:</b> 2</li>
-                <li><b>Maximum resolution:</b> 8k</li>
-                <li><b>Prix:</b> 780$</li>
+                <li><b>Fabricant:</b> @GPU.Parent.Nom</li>
+                <li><b>Chipset:</b> @GPU.Chipset.ToString().Replace('_', ' ')</li>
+                <li><b>Memory:</b> @GPU.Memory GB</li>
+                <li><b>Memory Type:</b> @GPU.MemType</li>
+                <li><b>Boost Clock:</b> @GPU.BoostClock MHz</li>
+                <li><b>Core Clock:</b> @GPU.CoreClock MHz</li>
+                <li><b>Length:</b> @GPU.Length mm</li>
+                <li><b>TDP:</b> @GPU.TDP W</li>
+                <li><b>HDMI Ports:</b> @GPU.HDMIPorts</li>
+                <li><b>DP Ports:</b> @GPU.DPPorts</li>
+                <li><b>Maximum resolution:</b> @GPU.MaxRes</li>
+                <li><b>Prix:</b> @GPU.Prix.ToString("0.00")$</li>
             </ul>
             <form action="https://www.w3schools.com/action_page.php" method="post">
-                <input type="hidden" name="nom" value="RTX-3070-Vision-OC">
+                <input type="hidden" name="id" value="@GPU.Id">
                 <button type="submit" class="btn btn-primary">Favoris <i class="fas fa-plus"></i></button>
             </form>
         </div>
@@ -63,16 +75,16 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="/images/GPUs/Gigabyte/RTX-3070-Vision-OC/RTX-3070-Vision-OC-1.jpg" class="d-block img-fluid" alt="RTX-3070-Vision-OC-1.jpg">
+                        <img src="@getImgPath(1)" class="d-block img-fluid" alt="GPU-with-Box">
                     </div>
                     <div class="carousel-item">
-                        <img src="/images/GPUs/Gigabyte/RTX-3070-Vision-OC/RTX-3070-Vision-OC-2.jpg " class="d-block img-fluid" alt="RTX-3070-Vision-OC-2.jpg">
+                        <img src="@getImgPath(2)" class="d-block img-fluid" alt="GPU-front">
                     </div>
                     <div class="carousel-item">
-                        <img src="/images/GPUs/Gigabyte/RTX-3070-Vision-OC/RTX-3070-Vision-OC-3.jpg" class="d-block img-fluid" alt="RTX-3070-Vision-OC-3.jpg">
+                        <img src="@getImgPath(3)" class="d-block img-fluid" alt="GPU-back">
                     </div>
                     <div class="carousel-item">
-                        <img src="/images/GPUs/Gigabyte/RTX-3070-Vision-OC/RTX-3070-Vision-OC-4.jpg" class="d-block img-fluid" alt="RTX-3070-Vision-OC-4.jpg">
+                        <img src="@getImgPath(4)" class="d-block img-fluid" alt="GPU-IO">
                     </div>
                 </div>
                 <button class="carousel-control-prev carousel-control" type="button" data-target="#carouselDetailsIndicators" data-slide="prev">
@@ -90,10 +102,8 @@
     <div class="row description">
         <h3>Description</h3>
         <p>
-            La puissante GeForce RTX™ Série 30 VISION accélère votre travail grâce à des performances incroyables. Que ce soit MONTAGE VIDÉO, ANIMATION 3D, PHOTOGRAPHIE, CONCEPTION GRAPHIQUE, ARCHITECTURE ou STREAMING, elle peut vous faire gagner
-            beaucoup de temps.
+            @GPU.Description
         </p>
     </div>
 
 </div>
-<p id="fixed-p">Ceci est un element fixé.</p>

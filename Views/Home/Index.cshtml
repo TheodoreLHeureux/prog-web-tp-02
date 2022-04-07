@@ -1,4 +1,8 @@
-﻿@section Style {
+﻿@using prog_web_tp_2.Models; è
+
+@model List<Parent>;
+
+@section Style {
     <link href="~/style/accueil.css" rel="stylesheet" type="text/css" />
 }
 
@@ -11,47 +15,25 @@
     <h1>Fabricants</h1>
 </div>
 <div class="row vendeurs-container">
-    <a href="recherche.html" class="col-md-4 col-xs-12" id="asus">
-        <div class="vendeur">
-            <div class="vendeur-img">
-                <img src="images/asus.png" alt="asus logo" class="img-fluid">
-            </div>
-            <div class="vendeur-info">
-                <ul>
-                    <li>Nombre de carte graphiques: 4</li>
-                </ul>
-                <p>
-                    Asus est une entreprise taïwanaise qui produit notamment les cartes graphiques ROG (Republic Of Gamers) et TUF (The Ultimate Force).
-                </p>
-            </div>
-        </div>
-    </a>
-    <a href="recherche.html" class="col-md-4 col-xs-12" id="gigabyte">
-        <div class="vendeur">
-            <div class="vendeur-img">
-                <img src="images/gigabyte.png" alt="gigabyte logo" class="img-fluid">
-            </div>
-            <div class="vendeur-info">
-                <ul>
-                    <li>Nombre de carte graphiques: 4</li>
-                </ul>
-                <p>
-                    Gigabyte est une entreprise taïwanaise dont le revenu annuel est d'environ <span>84 milliards</span>. Ce sont eux qui produisent les cartes graphiques AORUS.
-                </p>
-            </div>
-        </div>
-    </a>
-    <a href="recherche.html" class="col-md-4 col-xs-12" id="evga">
-        <div class="vendeur">
-            <img src="images/evga.png" alt="evga logo" class="img-fluid">
-            <div class="vendeur-info">
-                <ul>
-                    <li>Nombre de carte graphiques: 4</li>
-                </ul>
-                <p>
-                    EVGA Corporation est une compagnie californienne. Cette compagnie est plus petite que les autres, mais elle est souvent reconnue pour son service à la clientèle.
-                </p>
-            </div>
-        </div>
-    </a>
+    @{
+        foreach (Parent p in Model)
+        {
+            <a href="/Enfant/Recherche" class="col-md-4 col-xs-12" id="@(p.Nom.ToLower())">
+                <div class="vendeur">
+                    <div class="vendeur-img">
+                        <img src="@(p.ImageURL)" alt="@(p.Nom.ToLower()) logo" class="img-fluid">
+                    </div>
+                    <div class="vendeur-info">
+                        <ul>
+                            <li>Nombre de carte graphiques: @(p.Enfants.Count)</li>
+                            <li>Prix moyen: @(p.Enfants.Average(e => e.Prix).ToString("0.00"))</li>
+                        </ul>
+                        <p>
+                            @(p.Description)
+                        </p>
+                    </div>
+                </div>
+            </a>
+        }
+    }
 </div>

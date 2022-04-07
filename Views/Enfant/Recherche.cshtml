@@ -1,130 +1,39 @@
-﻿@{
+﻿@using prog_web_tp_2.Models;
+
+@model FausseBaseDeDonnees;
+
+@{
     Layout = "_Layout";
+    List<Enfant> Enfants = Model.Enfants;
+    List<Parent> Parents = Model.Parents;
+
+    void RenderItem(Enfant e)
+    {
+        <div class="col-12 col-md-4 px-2 item">
+            <div class="card">
+                <img src="@e.ImageURL" class="card-img-top img-fluid" alt="@e.Nom">
+                <div class="card-body">
+                    <h1 class="card-title">@e.Nom</h1>
+                    <a href="/Enfant/Detail/@e.Id" class="btn btn-primary">Details</a>
+                </div>
+            </div>
+        </div>
+    }
+
 }
 @section Style {
     <link rel="stylesheet" href="/style/recherche.css">
 }
 
-
 <div class="row content">
     <div class="col-12 col-lg-9 order-1 order-lg-0">
-        <div class="row">
-            <div class="col-12 col-md-4 px-2 item">
-                <div class="card">
-                    <img src="/images/GPUs/Gigabyte/RTX-3060-Vision-OC.jpg" class="card-img-top img-fluid" alt="RTX 3060 Vision OC">
-                    <div class="card-body">
-                        <h1 class="card-title">RTX 3060 Vision OC</h1>
-                        <a href="/Enfant/Detail" class="btn btn-primary">Details</a>
-                    </div>
-                </div>
+        @for (int x = 0; x < Enfants.Count; x += 3)
+        {
+            <div class="row">
+                @for (int y = 0; y < 3; y++)
+                    RenderItem(Enfants[x + y]);
             </div>
-            <div class="col-12 col-md-4 px-2 item">
-                <div class="card">
-                    <img src="/images/GPUs/Gigabyte/RTX-3070-Vision-OC/RTX-3070-Vision-OC-1.jpg" class="card-img-top img-fluid" alt="RTX 3070 Vision OC">
-                    <div class="card-body">
-                        <h1 class="card-title">RTX 3070 Vision OC</h1>
-                        <a href="/Enfant/Detail" class="btn btn-primary">Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-4 px-2 item">
-                <div class="card">
-                    <img src="/images/GPUs/Gigabyte/RTX-3080-Vision-OC.jpg" class="card-img-top img-fluid" alt="RTX 3080 Vision OC">
-                    <div class="card-body">
-                        <h1 class="card-title">RTX 3080 Vision OC</h1>
-                        <a href="/Enfant/Detail" class="btn btn-primary">Details</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-4 px-2 item">
-                <div class="card">
-                    <img src="/images/GPUs/Gigabyte/RTX-3090-Vision-OC.jpg" class="card-img-top img-fluid" alt="RTX 3090 Vision OC">
-                    <div class="card-body">
-                        <h1 class="card-title">RTX 3090 Vision OC</h1>
-                        <a href="/Enfant/Detail" class="btn btn-primary">Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-4 px-2 item">
-                <div class="card">
-                    <img src="/images/GPUs/Asus/RTX-3060-Strix-Gaming-OC/RTX-3060-Strix-Gaming-OC-1.jpg" class="card-img-top img-fluid" alt="RTX 3060 ROG STRIX GAMING OC">
-                    <div class="card-body">
-                        <h1 class="card-title">RTX 3060 ROG Strix Gaming OC</h1>
-                        <a href="/Enfant/Detail" class="btn btn-primary">Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-4 px-2 item">
-                <div class="card">
-                    <img src="/images/GPUs/Asus/RTX-3070-Strix-OC.jpg" class="card-img-top img-fluid" alt="RTX 3070 ROG Strix OC">
-                    <div class="card-body">
-                        <h1 class="card-title">RTX 3070 ROG Strix OC White</h1>
-                        <a href="/Enfant/Detail" class="btn btn-primary">Details</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-4 px-2 item">
-                <div class="card">
-                    <img src="/images/GPUs/Asus/RTX-3080-Strix-OC.jpg" class="card-img-top img-fluid" alt="RTX 3080 ROG Strix OC">
-                    <div class="card-body">
-                        <h1 class="card-title">RTX 3080 ROG Strix OC White</h1>
-                        <a href="/Enfant/Detail" class="btn btn-primary">Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-4 px-2 item">
-                <div class="card">
-                    <img src="/images/GPUs/Asus/RTX-3090-Strix-OC-White/RTX-3090-Strix-OC-White-1.jpg" class="card-img-top img-fluid" alt="RTX 3090 ROG Strix OC White">
-                    <div class="card-body">
-                        <h1 class="card-title">RTX 3090 ROG Strix OC White</h1>
-                        <a href="/Enfant/Detail" class="btn btn-primary">Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-4 px-2 item">
-                <div class="card">
-                    <img src="/images/GPUs/EVGA/RTX-3060-XC-Black-Gaming.jpg" class="card-img-top img-fluid" alt="RTX 3060 XC Black Gaming">
-                    <div class="card-body">
-                        <h1 class="card-title">EVGA RTX 3060 XC Black Gaming</h1>
-                        <a href="/Enfant/Detail" class="btn btn-primary">Details</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12 col-md-4 px-2 item">
-                <div class="card">
-                    <img src="/images/GPUs/EVGA/RTX-3070-FTW3-Ultra-Gaming.jpg" class="card-img-top img-fluid" alt="RTX 3070 FTW3 Ultra Gaming<">
-                    <div class="card-body">
-                        <h1 class="card-title">EVGA RTX 3070 FTW3 Ultra Gaming</h1>
-                        <a href="/Enfant/Detail" class="btn btn-primary">Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-4 px-2 item">
-                <div class="card">
-                    <img src="/images/GPUs/EVGA/RTX-3080-FTW3-Ultra-Gaming.jpg" class="card-img-top img-fluid" alt="RTX 3080 FTW3 Ultra Gaming<">
-                    <div class="card-body">
-                        <h1 class="card-title">EVGA RTX 3080 FTW3 Ultra Gaming</h1>
-                        <a href="/Enfant/Detail" class="btn btn-primary">Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-4 px-2 item">
-                <div class="card">
-                    <img src="/images/GPUs/EVGA/RTX-3090-FTW3-Ultra-Gaming/RTX-3090-FTW3-Ultra-Gaming-1.jpg" class="card-img-top img-fluid" alt="RTX 3090 FTW3 Ultra Gaming<">
-                    <div class="card-body">
-                        <h1 class="card-title">EVGA RTX 3090 FTW3 Ultra Gaming</h1>
-                        <a href="/Enfant/Detail" class="btn btn-primary">Details</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        }
     </div>
     <div class="col-12 col-lg-3 order-0 order-lg-1">
         <div class="zone-recherche">
@@ -142,18 +51,13 @@
                                 <input type="checkbox" name="Tous" id="search-manufacturer-checklist-tous">
                                 <label for="search-manufacturer-checklist-tous">Tous</label>
                             </li>
-                            <li>
-                                <input type="checkbox" name="Asus" id="search-manufacturer-checklist-asus">
-                                <label for="search-manufacturer-checklist-asus">Asus</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="EVGA" id="search-manufacturer-checklist-evga">
-                                <label for="search-manufacturer-checklist-evga">EVGA</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="Gigabyte" id="search-manufacturer-checklist-gigabyte">
-                                <label for="search-manufacturer-checklist-gigabyte">Gigabyte</label>
-                            </li>
+                            @foreach (Parent p in Parents)
+                            {
+                                <li>
+                                    <input type="checkbox" name="@p.Nom" id="search-manufacturer-checklist-@p.Nom.ToLower()">
+                                    <label for="search-manufacturer-checklist-@p.Nom.ToLower()">@p.Nom</label>
+                                </li>
+                            }
                         </ul>
                     </div>
                     <div class="checklist-container col-12 col-xxl-6" id="chipset">
@@ -163,22 +67,13 @@
                                 <input type="checkbox" name="Tous" id="search-chipset-checklist-tous">
                                 <label for="search-chipset-checklist-tous">Tous</label>
                             </li>
-                            <li>
-                                <input type="checkbox" name="3060" id="search-chipset-checklist-3060">
-                                <label for="search-chipset-checklist-3060">GeForce RTX 3060</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="3070" id="search-chipset-checklist-3070">
-                                <label for="search-chipset-checklist-3070">GeForce RTX 3070</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="3080" id="search-chipset-checklist-3080">
-                                <label for="search-chipset-checklist-3080">GeForce RTX 3080</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="3090" id="search-chipset-checklist-3090">
-                                <label for="search-chipset-checklist-3090">GeForce RTX 3090</label>
-                            </li>
+                            @foreach (var i in Enum.GetValues(typeof(enuChipsets)))
+                            {
+                                <li>
+                                    <input type="checkbox" name="@(i.ToString())))" id="search-chipset-checklist-@(i.ToString())">
+                                    <label for="search-chipset-checklist-@(i.ToString())">@(i.ToString().Replace('_', ' '))</label>
+                                </li>
+                            }
                         </ul>
                     </div>
                 </div>
