@@ -28,6 +28,7 @@ namespace prog_web_tp_2.Models
             Enfants.Add(new Enfant(1, 1, "RTX 3070 Vision OC", descVisionOC, (enuChipsets) 1, 8, "GDDR6", 1815, 1500, 286, 220, 2, 2, "8K", 779.99));
             Enfants.Add(new Enfant(2, 1, "RTX 3080 Vision OC", descVisionOC, (enuChipsets) 2, 10, "GDDR6X", 1800, 1440, 320, 320, 2, 3, "8K", 1099.99));
             Enfants.Add(new Enfant(3, 1, "RTX 3090 Vision OC", descVisionOC, (enuChipsets) 3, 8, "GDDR6", 1815, 1500, 286, 220, 2, 2, "8K", 780));
+            // Add data for entries below
             Enfants.Add(new Enfant(4, 0, "RTX 3060 Strix Gaming OC", descVisionOC, (enuChipsets) 1, 8, "GDDR6", 1815, 1500, 286, 220, 2, 2, "8K", 780));
             Enfants.Add(new Enfant(5, 0, "RTX 3070 Strix OC White", descVisionOC, (enuChipsets) 1, 8, "GDDR6", 1815, 1500, 286, 220, 2, 2, "8K", 780));
             Enfants.Add(new Enfant(6, 0, "RTX 3080 Strix OC White", descVisionOC, (enuChipsets) 1, 8, "GDDR6", 1815, 1500, 286, 220, 2, 2, "8K", 780));
