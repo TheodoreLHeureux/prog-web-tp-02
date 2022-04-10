@@ -1,5 +1,5 @@
 ﻿@using prog_web_tp_2.Models;
-@using System.linq;
+@using System.Linq;
 
 @model List<Parent>;
 
@@ -28,7 +28,6 @@
                         <ul>
                             <li>Nombre de carte graphiques: @(p.Enfants.Count)</li>
                             <li>Prix moyen: @(p.Enfants.Average(e => e.Prix).ToString("0.00"))</li>
-                            //<li>@p.Enfants.</li>
                         </ul>
                         <p>
                             @(p.Description)

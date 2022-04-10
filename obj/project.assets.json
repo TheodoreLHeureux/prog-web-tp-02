@@ -660,11 +660,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\theod\\OneDrive - Cégep Édouard-Montpetit\\Hiver 2022\\Programmation Web serveur\\prog-web-tp-2\\prog-web-tp-2.csproj",
+      "projectUniqueName": "D:\\prog-web-tp-02\\prog-web-tp-2.csproj",
       "projectName": "prog-web-tp-2",
-      "projectPath": "C:\\Users\\theod\\OneDrive - Cégep Édouard-Montpetit\\Hiver 2022\\Programmation Web serveur\\prog-web-tp-2\\prog-web-tp-2.csproj",
+      "projectPath": "D:\\prog-web-tp-02\\prog-web-tp-2.csproj",
       "packagesPath": "C:\\Users\\theod\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\theod\\OneDrive - Cégep Édouard-Montpetit\\Hiver 2022\\Programmation Web serveur\\prog-web-tp-2\\obj\\",
+      "outputPath": "D:\\prog-web-tp-02\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\theod\\AppData\\Roaming\\NuGet\\NuGet.Config",
