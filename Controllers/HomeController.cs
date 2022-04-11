@@ -10,7 +10,7 @@ namespace prog_web_tp_2.Controllers
     public class HomeController : Controller
     {
 
-        private FausseBaseDeDonnees BD;
+        private readonly FausseBaseDeDonnees BD;
 
         public HomeController(FausseBaseDeDonnees BD)
         {

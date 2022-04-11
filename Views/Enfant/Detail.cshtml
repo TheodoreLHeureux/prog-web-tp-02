@@ -21,15 +21,15 @@
         $('.myCarousel').carousel();
 
         function normalizeSlideHeights() {
-            $('.carousel').each(function () {
+            $('.carousel').each(function() {
                 var items = $('.carousel-item', this);
                 items.css('min-height', 0);
                 var maxHeight = Math.max.apply(null,
-                    items.map(function () {
-                        return $(this).outerHeight()
+                    items.map(function() {
+                        return $(this).outerHeight();
                     }).get());
                 items.css('min-height', maxHeight + 'px');
-            })
+            });
         }
 
         $(window).on(

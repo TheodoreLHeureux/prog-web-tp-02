@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\prog-web-tp-02\\prog-web-tp-2.csproj": {}
+    "C:\\Users\\theod\\Documents\\Dev\\prog-web-tp-02\\prog-web-tp-2.csproj": {}
   },
   "projects": {
-    "D:\\prog-web-tp-02\\prog-web-tp-2.csproj": {
+    "C:\\Users\\theod\\Documents\\Dev\\prog-web-tp-02\\prog-web-tp-2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\prog-web-tp-02\\prog-web-tp-2.csproj",
+        "projectUniqueName": "C:\\Users\\theod\\Documents\\Dev\\prog-web-tp-02\\prog-web-tp-2.csproj",
         "projectName": "prog-web-tp-2",
-        "projectPath": "D:\\prog-web-tp-02\\prog-web-tp-2.csproj",
+        "projectPath": "C:\\Users\\theod\\Documents\\Dev\\prog-web-tp-02\\prog-web-tp-2.csproj",
         "packagesPath": "C:\\Users\\theod\\.nuget\\packages\\",
-        "outputPath": "D:\\prog-web-tp-02\\obj\\",
+        "outputPath": "C:\\Users\\theod\\Documents\\Dev\\prog-web-tp-02\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\theod\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -26,7 +26,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -38,7 +37,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
@@ -63,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

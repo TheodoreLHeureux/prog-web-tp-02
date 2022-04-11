@@ -5,7 +5,7 @@ namespace prog_web_tp_2.Controllers
 {
     public class EnfantController : Controller
     {
-        private FausseBaseDeDonnees DB;
+        private readonly FausseBaseDeDonnees DB;
 
         public EnfantController(FausseBaseDeDonnees DB)
         {
