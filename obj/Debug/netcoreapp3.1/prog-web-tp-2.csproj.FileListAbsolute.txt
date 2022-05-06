@@ -1805,3 +1805,4 @@ D:\Programming\prog-web-tp-02\obj\Debug\netcoreapp3.1\prog-web-tp-2.dll
 D:\Programming\prog-web-tp-02\obj\Debug\netcoreapp3.1\prog-web-tp-2.pdb
 D:\Programming\prog-web-tp-02\obj\Debug\netcoreapp3.1\prog-web-tp-2.genruntimeconfig.cache
 D:\Programming\prog-web-tp-02\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+D:\Programming\prog-web-tp-02\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
