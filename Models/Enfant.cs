@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Threading.Tasks;
 
 namespace prog_web_tp_2.Models
@@ -25,8 +26,9 @@ namespace prog_web_tp_2.Models
         public int DPPorts { get; set; }
         public string MaxRes { get; set; }
         public double Prix { get; set; }
+        public bool Premium { get; set; }
 
-        public Enfant(int Id, int IdParent, string Nom, string Description, enuChipsets Chipset, int Memory, string MemType, int BoostClock, int CoreClock, int Length, int TDP, int HDMIPorts, int DPPorts, string MaxRes, double Prix)
+        public Enfant(int Id, int IdParent, string Nom, string Description, enuChipsets Chipset, int Memory, string MemType, int BoostClock, int CoreClock, int Length, int TDP, int HDMIPorts, int DPPorts, string MaxRes, double Prix, bool Premium)
         {
             this.Id = Id;
             this.IdParent = IdParent;
@@ -43,6 +45,7 @@ namespace prog_web_tp_2.Models
             this.DPPorts = DPPorts;
             this.MaxRes = MaxRes;
             this.Prix = Prix;
+            this.Premium = Premium;
         }
 
     }

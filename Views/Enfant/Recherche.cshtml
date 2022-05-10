@@ -1,45 +1,43 @@
-﻿@model FausseBaseDeDonnees;
+﻿@model PageRechercheViewModel;
 
 @{
-    List<Enfant> Enfants = Model.Enfants;
-    List<Parent> Parents = Model.Parents;
+    List<Enfant> Enfants = Model.Resultat;
+    CritereRechercheViewModel Criteres = Model.Criteres;
 
-    void RenderItem(Enfant e)
-    {
-        <div class="col-12 col-md-4 px-2 item">
-            <div class="card">
-                <img src="@e.ImageURL" class="card-img-top img-fluid" alt="@e.Nom">
-                <div class="card-body">
-                    <h1 class="card-title">@e.Nom</h1>
-                    <a href="/Enfant/Detail/@e.Id" class="btn btn-primary">Details</a>
-                </div>
-            </div>
-        </div>
-    }
-
+    
 }
+
 @section Style {
     <link rel="stylesheet" href="/style/recherche.css">
 }
 
 <div class="row content">
     <div class="col-12 col-lg-9 order-1 order-lg-0">
-        @for (int x = 0; x < Enfants.Count; x += 3)
-        {
-            <div class="row">
-                @for (int y = 0; y < 3; y++)
-                {
-                    RenderItem(Enfants[x + y]);
-                }
-            </div>
-        }
+        <div class="row">
+            @foreach (Enfant e in Enfants)
+            {
+                <div class="col-12 col-md-4 px-2 item">
+                    <div class="card">
+                        <img src="@e.ImageURL" class="card-img-top img-fluid" alt="@e.Nom">
+                        <div class="card-body">
+                            <h1 class="card-title">@e.Nom</h1>
+                            <a href="/Enfant/Detail/@e.Id" class="btn btn-primary">Details</a>
+                        </div>
+                    </div>
+                </div>
+            }
+            @if (Enfants.Count == 0)
+            {
+                <h1 style="color: white; margin: 20px; margin-bottom: 100vh;">Aucun resultat ne correspond a ces criteres.</h1>
+            }
+        </div>
     </div>
     <div class="col-12 col-lg-3 order-0 order-lg-1">
         <div class="zone-recherche">
-            <form action="https://www.w3schools.com/action_page.php" method="post">
+            <form action="/filtrer" method="get">
                 <div id="search-bar-container" class="search-section">
                     <label for="search-bar"><b>Rechercher par mots-clés:</b></label>
-                    <input class="input-txt" type="text" name="Rechercher" placeholder="Rechercher" autocomplete="off" id="search-bar">
+                    <input class="input-txt" type="text" value="@Criteres.MotsCles" name="MotsCles" placeholder="Rechercher" autocomplete="off" id="search-bar">
                 </div>
 
                 <div id="checklists" class="row search-section">
@@ -47,49 +45,64 @@
                         <p><b>Fabricant:</b></p>
                         <ul class="checklist">
                             <li>
-                                <input type="checkbox" name="Tous" id="search-manufacturer-checklist-tous">
+                                <input type="checkbox" @(Criteres.Asus && Criteres.Gigabyte && Criteres.EVGA ? "checked" : "") name="Tous" id="search-manufacturer-checklist-tous">
                                 <label for="search-manufacturer-checklist-tous">Tous</label>
                             </li>
-                            @foreach (Parent p in Parents)
-                            {
-                                <li>
-                                    <input type="checkbox" name="@p.Nom" id="search-manufacturer-checklist-@p.Nom.ToLower()">
-                                    <label for="search-manufacturer-checklist-@p.Nom.ToLower()">@p.Nom</label>
-                                </li>
-                            }
+                            <li>
+                                <input type="checkbox" @(Criteres.Asus ? "checked" : "") name="Asus" value="true" id="search-manufacturer-checklist-asus">
+                                <label for="search-manufacturer-checklist-asus">Asus</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" @(Criteres.Gigabyte ? "checked" : "") name="Gigabyte" value="true" id="search-manufacturer-checklist-gigabyte">
+                                <label for="search-manufacturer-checklist-gigabyte">Gigabyte</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" @(Criteres.EVGA ? "checked" : "") name="EVGA" value="true" id="search-manufacturer-checklist-evga">
+                                <label for="search-manufacturer-checklist-evga">EVGA</label>
+                            </li>
                         </ul>
                     </div>
                     <div class="checklist-container col-12 col-xxl-6" id="chipset">
                         <p><b>Chipset:</b></p>
                         <ul class="checklist">
                             <li>
-                                <input type="checkbox" name="Tous" id="search-chipset-checklist-tous">
+                                <input type="checkbox" @(Criteres.Est3060 && Criteres.Est3070 && Criteres.Est3080 && Criteres.Est3090 ? "checked" : "") name="TousChipset" id="search-chipset-checklist-tous">
                                 <label for="search-chipset-checklist-tous">Tous</label>
                             </li>
-                            @foreach (var i in Enum.GetValues(typeof(enuChipsets)))
-                            {
-                                <li>
-                                    <input type="checkbox" name="@(i.ToString())))" id="search-chipset-checklist-@(i.ToString())">
-                                    <label for="search-chipset-checklist-@(i.ToString())">@(i.ToString().Replace('_', ' '))</label>
-                                </li>
-                            }
+    
+                            <li>
+                                <input type="checkbox" @(Criteres.Est3060 ? "checked" : "") value="true" name="Est3060" id="search-chipset-checklist-3060">
+                                <label for="search-chipset-checklist-3060">GeForce RTX 3060</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" @(Criteres.Est3070 ? "checked" : "") value="true" name="Est3070" id="search-chipset-checklist-3070">
+                                <label for="search-chipset-checklist-3070">GeForce RTX 3070</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" @(Criteres.Est3080 ? "checked" : "") value="true" name="Est3080" id="search-chipset-checklist-3080">
+                                <label for="search-chipset-checklist-3080">GeForce RTX 3080</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" @(Criteres.Est3090 ? "checked" : "") value="true" name="Est3090" id="search-chipset-checklist-3090">
+                                <label for="search-chipset-checklist-3090">GeForce RTX 3090</label>
+                            </li>
                         </ul>
                     </div>
                 </div>
 
                 <div id="price" class="search-section">
                     <label for="price-min">Prix de: </label>
-                    <input class="input-txt" type="number" name="Min" id="price-min" placeholder="Min" autocomplete="off" min="0">
+                    <input class="input-txt" type="number" name="PrixMin" id="price-min" value="@Criteres.PrixMin" placeholder="Min" autocomplete="off" min="0">
                     <label for="price-max">à</label>
-                    <input class="input-txt" type="number" name="Min" id="price-max" placeholder="Max" autocomplete="off">
+                    <input class="input-txt" type="number" name="PrixMax" id="price-max" value="@Criteres.PrixMax" placeholder="Max" autocomplete="off">
                 </div>
 
                 <div id="premium-selector">
                     <label for="search-premium" id="label-premium">Article premium: </label>
-                    <select name="Premium" id="search-premium" class="input-txt">
-                        <option value="all">Peu importe</option>
-                        <option value="yes">Oui</option>
-                        <option value="no">No</option>
+                    <select name="ArticlePremium" id="search-premium" class="input-txt">
+                        <option @(Criteres.ArticlePremium == 0 ? "selected" : "") value="0">Peu importe</option>
+                        <option @(Criteres.ArticlePremium == 1 ? "selected" : "") value="1">Oui</option>
+                        <option @(Criteres.ArticlePremium == 2 ? "selected" : "") value="2">Non</option>
                     </select>
                 </div>
 

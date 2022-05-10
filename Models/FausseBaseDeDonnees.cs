@@ -37,18 +37,18 @@ namespace prog_web_tp_2.Models
 
             Enfants = new List<Enfant>
             {
-                new Enfant(0, 1, "RTX 3060 Vision OC", DescVisionOC, (enuChipsets)0, 12, "GDDR6", 1837, 1320, 286, 170, 2, 2, "8K", 499.99),
-                new Enfant(1, 1, "RTX 3070 Vision OC", DescVisionOC, (enuChipsets)1, 8, "GDDR6", 1815, 1500, 286, 220, 2, 2, "8K", 779.99),
-                new Enfant(2, 1, "RTX 3080 Vision OC", DescVisionOC, (enuChipsets)2, 10, "GDDR6X", 1800, 1440, 320, 320, 2, 3, "8K", 1099.99),
-                new Enfant(3, 1, "RTX 3090 Vision OC", DescVisionOC, (enuChipsets)3, 8, "GDDR6X", 1815, 1500, 286, 220, 2, 2, "8K", 2199.99),
-                new Enfant(4, 0, "RTX 3060 Strix Gaming OC", DescAsus3060, (enuChipsets)0, 12, "GDDR6", 1912, 1320, 300, 170, 2, 3, "8K", 688.99),
-                new Enfant(5, 0, "RTX 3070 Strix OC White", DescAsus3070, (enuChipsets)1, 8, "GDDR6", 1935, 1500, 319, 220, 2, 3, "8K", 877.05),
-                new Enfant(6, 0, "RTX 3080 Strix OC White", DescAsus3080, (enuChipsets)2, 10, "GDDR6X", 1710, 1440, 286, 320, 2, 3, "8K", 1299.99),
-                new Enfant(7, 0, "RTX 3090 Strix OC White", DescAsus3090, (enuChipsets)3, 24, "GDDR6X", 1890, 1395, 319, 350, 2, 3, "8K", 2449.99),
-                new Enfant(8, 2, "RTX 3060 XC Black Gaming", DescEVGA3060, (enuChipsets)0, 12, "GDDR6", 1777, 1320, 202, 170, 1, 3, "8K", 399.99),
-                new Enfant(9, 2, "RTX 3070 FTW3 Ultra Gaming", DescEVGA3070, (enuChipsets)1, 8, "GDDR6", 1815, 1500, 300, 220, 1, 3, "8K", 719.99),
-                new Enfant(10, 2, "RTX 3080 FTW3 Ultra Gaming", DescEVGA3080, (enuChipsets)2, 10, "GDDR6X", 1800, 1440, 300, 320, 1, 3, "8K", 919.99),
-                new Enfant(11, 2, "RTX 3090 FTW3 Ultra Gaming", DescEVGA3090, (enuChipsets)3, 24, "GDDR6X", 1800, 1395, 300, 350, 1, 3, "8K", 1919.99)
+                new Enfant(0, 1, "RTX 3060 Vision OC", DescVisionOC, (enuChipsets)0, 12, "GDDR6", 1837, 1320, 286, 170, 2, 2, "8K", 499.99, false),
+                new Enfant(1, 1, "RTX 3070 Vision OC", DescVisionOC, (enuChipsets)1, 8, "GDDR6", 1815, 1500, 286, 220, 2, 2, "8K", 779.99, false),
+                new Enfant(2, 1, "RTX 3080 Vision OC", DescVisionOC, (enuChipsets)2, 10, "GDDR6X", 1800, 1440, 320, 320, 2, 3, "8K", 1099.99, false),
+                new Enfant(3, 1, "RTX 3090 Vision OC", DescVisionOC, (enuChipsets)3, 8, "GDDR6X", 1815, 1500, 286, 220, 2, 2, "8K", 2199.99, true),
+                new Enfant(4, 0, "RTX 3060 Strix Gaming OC", DescAsus3060, (enuChipsets)0, 12, "GDDR6", 1912, 1320, 300, 170, 2, 3, "8K", 688.99, false),
+                new Enfant(5, 0, "RTX 3070 Strix OC White", DescAsus3070, (enuChipsets)1, 8, "GDDR6", 1935, 1500, 319, 220, 2, 3, "8K", 877.05, false),
+                new Enfant(6, 0, "RTX 3080 Strix OC White", DescAsus3080, (enuChipsets)2, 10, "GDDR6X", 1710, 1440, 286, 320, 2, 3, "8K", 1299.99, false),
+                new Enfant(7, 0, "RTX 3090 Strix OC White", DescAsus3090, (enuChipsets)3, 24, "GDDR6X", 1890, 1395, 319, 350, 2, 3, "8K", 2449.99, true),
+                new Enfant(8, 2, "RTX 3060 XC Black Gaming", DescEVGA3060, (enuChipsets)0, 12, "GDDR6", 1777, 1320, 202, 170, 1, 3, "8K", 399.99, false),
+                new Enfant(9, 2, "RTX 3070 FTW3 Ultra Gaming", DescEVGA3070, (enuChipsets)1, 8, "GDDR6", 1815, 1500, 300, 220, 1, 3, "8K", 719.99, false),
+                new Enfant(10, 2, "RTX 3080 FTW3 Ultra Gaming", DescEVGA3080, (enuChipsets)2, 10, "GDDR6X", 1800, 1440, 300, 320, 1, 3, "8K", 919.99, false),
+                new Enfant(11, 2, "RTX 3090 FTW3 Ultra Gaming", DescEVGA3090, (enuChipsets)3, 24, "GDDR6X", 1800, 1395, 300, 350, 1, 3, "8K", 1919.99, true)
             };
 
             foreach (var p in Parents)

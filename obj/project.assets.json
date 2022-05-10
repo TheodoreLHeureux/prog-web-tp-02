@@ -6198,19 +6198,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\2032422\\.nuget\\packages\\": {}
+    "C:\\Users\\theod\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programming\\prog-web-tp-02\\prog-web-tp-2.csproj",
+      "projectUniqueName": "G:\\Programming\\prog-web-tp-02\\prog-web-tp-2.csproj",
       "projectName": "prog-web-tp-2",
-      "projectPath": "D:\\Programming\\prog-web-tp-02\\prog-web-tp-2.csproj",
-      "packagesPath": "C:\\Users\\2032422\\.nuget\\packages\\",
-      "outputPath": "D:\\Programming\\prog-web-tp-02\\obj\\",
+      "projectPath": "G:\\Programming\\prog-web-tp-02\\prog-web-tp-2.csproj",
+      "packagesPath": "C:\\Users\\theod\\.nuget\\packages\\",
+      "outputPath": "G:\\Programming\\prog-web-tp-02\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\2032422\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\theod\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6263,7 +6263,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
