@@ -1,0 +1,12 @@
+﻿@model Enfant
+
+<div class="col-12 col-md-4 px-2 item">
+    <div class="card">
+        <img src="@Model.ImageURL" class="card-img-top img-fluid" alt="@Model.Nom">
+        <div class="card-body">
+            <h1 class="card-title">@Model.Nom</h1>
+            <a href="/Enfant/Detail/@Model.Id" class="btn btn-primary">Details</a>
+            <a href="/GestionEnfant/Delete/@Model.Id" class="btn btn-danger">Supprimer</a>
+        </div>
+    </div>
+</div>

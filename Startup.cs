@@ -18,6 +18,8 @@ namespace prog_web_tp_2
         {
             services.AddMvc().AddRazorRuntimeCompilation(); //Besoin d'inclure la biblioth�que : Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation
             services.AddSingleton<FausseBaseDeDonnees>();
+            services.AddDistributedMemoryCache();
+            services.AddSession(options => { options.IdleTimeout = TimeSpan.FromMinutes(20); });
         }
 
 
@@ -36,6 +38,8 @@ namespace prog_web_tp_2
             {
                 app.UseStaticFiles();
             }
+
+            app.UseSession();
             app.UseRouting();
             app.UseEndpoints(endpoints =>
             {

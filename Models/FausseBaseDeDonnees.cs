@@ -11,7 +11,7 @@ namespace prog_web_tp_2.Models
         private const string DescEVGA = "EVGA Corporation est une compagnie californienne. Cette compagnie est plus petite que les autres, mais elle est souvent reconnue pour son service à la clientèle.";
 
         private const string DescVisionOC = "La puissante GeForce RTX™ Série 30 VISION accélère votre travail grâce à des performances incroyables. Que ce soit MONTAGE VIDÉO, ANIMATION 3D, PHOTOGRAPHIE, CONCEPTION GRAPHIQUE, ARCHITECTURE ou STREAMING, elle peut vous faire gagner beaucoup de temps.";
-        
+
         private const string DescEVGA3060 = "The EVGA GeForce® RTX 3060 12GB provides players with the ability to vanquish 1080p and 1440p gaming, while providing a quality NVIDIA RTX™ experience and a myriad of productivity benefits. The card is powered by NVIDIA Ampere architecture, which doubles down on ray tracing and AI performance with enhanced RT cores, Tensor Cores, and new streaming multiprocessors. With 12GB of GDDR6 memory, high-end performance does not have to be sacrificed to find a card for gaming and everyday use.";
         private const string DescEVGA3070 = "The EVGA GeForce RTX™ 3070 is powered by the NVIDIA Ampere architecture. Built with enhanced RT Cores and Tensor Cores, new streaming multiprocessors, and high-speed G6 memory, it gives you the power you need to rip through the most demanding games at 1440p resolution. Combined with the next generation of design, cooling, and overclocking with EVGA Precision X1, the EVGA GeForce RTX™ 3070 Series creates a definition for ultimate performance.";
         private const string DescEVGA3080 = "Introducing the EVGA GeForce RTX™ 3080 12GB graphics cards - Built for and designed for gamers. The new GeForce RTX™ 3080 12GB features 20% more VRAM compared to the GeForce RTX™ 3080, more CUDA cores, and faster memory bandwidth to provide more performance headroom for high-resolution gaming and more demanding visual quality settings.";
@@ -37,18 +37,19 @@ namespace prog_web_tp_2.Models
 
             Enfants = new List<Enfant>
             {
-                new Enfant(0, 1, "RTX 3060 Vision OC", DescVisionOC, (enuChipsets)0, 12, "GDDR6", 1837, 1320, 286, 170, 2, 2, "8K", 499.99, false),
-                new Enfant(1, 1, "RTX 3070 Vision OC", DescVisionOC, (enuChipsets)1, 8, "GDDR6", 1815, 1500, 286, 220, 2, 2, "8K", 779.99, false),
-                new Enfant(2, 1, "RTX 3080 Vision OC", DescVisionOC, (enuChipsets)2, 10, "GDDR6X", 1800, 1440, 320, 320, 2, 3, "8K", 1099.99, false),
-                new Enfant(3, 1, "RTX 3090 Vision OC", DescVisionOC, (enuChipsets)3, 8, "GDDR6X", 1815, 1500, 286, 220, 2, 2, "8K", 2199.99, true),
-                new Enfant(4, 0, "RTX 3060 Strix Gaming OC", DescAsus3060, (enuChipsets)0, 12, "GDDR6", 1912, 1320, 300, 170, 2, 3, "8K", 688.99, false),
-                new Enfant(5, 0, "RTX 3070 Strix OC White", DescAsus3070, (enuChipsets)1, 8, "GDDR6", 1935, 1500, 319, 220, 2, 3, "8K", 877.05, false),
-                new Enfant(6, 0, "RTX 3080 Strix OC White", DescAsus3080, (enuChipsets)2, 10, "GDDR6X", 1710, 1440, 286, 320, 2, 3, "8K", 1299.99, false),
-                new Enfant(7, 0, "RTX 3090 Strix OC White", DescAsus3090, (enuChipsets)3, 24, "GDDR6X", 1890, 1395, 319, 350, 2, 3, "8K", 2449.99, true),
-                new Enfant(8, 2, "RTX 3060 XC Black Gaming", DescEVGA3060, (enuChipsets)0, 12, "GDDR6", 1777, 1320, 202, 170, 1, 3, "8K", 399.99, false),
-                new Enfant(9, 2, "RTX 3070 FTW3 Ultra Gaming", DescEVGA3070, (enuChipsets)1, 8, "GDDR6", 1815, 1500, 300, 220, 1, 3, "8K", 719.99, false),
-                new Enfant(10, 2, "RTX 3080 FTW3 Ultra Gaming", DescEVGA3080, (enuChipsets)2, 10, "GDDR6X", 1800, 1440, 300, 320, 1, 3, "8K", 919.99, false),
-                new Enfant(11, 2, "RTX 3090 FTW3 Ultra Gaming", DescEVGA3090, (enuChipsets)3, 24, "GDDR6X", 1800, 1395, 300, 350, 1, 3, "8K", 1919.99, true)
+                new Enfant { Id = 0, IdParent = 1, Nom = "RTX 3060 Vision OC", Description = DescVisionOC, Chipset = (enuChipsets)0, Memory = 12, MemType = "GDDR6", BoostClock = 1837, CoreClock = 1320, Length = 286, TDP = 170, HDMIPorts = 2, DPPorts = 2, MaxRes = "8K", Prix = 499.99, Premium = false },
+                new Enfant { Id = 1, IdParent = 1, Nom = "RTX 3070 Vision OC", Description = DescVisionOC, Chipset = (enuChipsets)1, Memory = 8, MemType = "GDDR6", BoostClock = 1815, CoreClock = 1500, Length = 286, TDP = 220, HDMIPorts = 2, DPPorts = 2, MaxRes = "8K", Prix = 779.99, Premium = false },
+                new Enfant { Id = 2, IdParent = 1, Nom = "RTX 3080 Vision OC", Description = DescVisionOC, Chipset = (enuChipsets)2, Memory = 10, MemType = "GDDR6X", BoostClock = 1800, CoreClock = 1440, Length = 320, TDP = 320, HDMIPorts = 2, DPPorts = 3, MaxRes = "8K", Prix = 1099.99, Premium = false },
+                new Enfant { Id = 3, IdParent = 1, Nom = "RTX 3090 Vision OC", Description = DescVisionOC, Chipset = (enuChipsets)3, Memory = 8, MemType = "GDDR6X", BoostClock = 1815, CoreClock = 1500, Length = 286, TDP = 220, HDMIPorts = 2, DPPorts = 2, MaxRes = "8K", Prix = 2199.99, Premium = true },
+                new Enfant { Id = 4, IdParent = 0, Nom = "RTX 3060 Strix Gaming OC", Description = DescAsus3060, Chipset = (enuChipsets)0, Memory = 12, MemType = "GDDR6", BoostClock = 1912, CoreClock = 1320, Length = 300, TDP = 170, HDMIPorts = 2, DPPorts = 3, MaxRes = "8K", Prix = 688.99, Premium = false},
+                new Enfant { Id = 5, IdParent = 0, Nom = "RTX 3070 Strix OC White", Description = DescAsus3070, Chipset = (enuChipsets)1, Memory = 8, MemType = "GDDR6", BoostClock = 1935, CoreClock = 1500, Length = 319, TDP = 220, HDMIPorts = 2, DPPorts = 3, MaxRes = "8K", Prix = 877.05, Premium = false },
+                new Enfant { Id = 6, IdParent = 0, Nom = "RTX 3080 Strix OC White", Description = DescAsus3080, Chipset = (enuChipsets)2, Memory = 10, MemType = "GDDR6X", BoostClock = 1710, CoreClock = 1440, Length = 286, TDP = 320, HDMIPorts = 2, DPPorts = 3, MaxRes = "8K", Prix = 1299.99, Premium = false },
+                new Enfant { Id = 7, IdParent = 0, Nom = "RTX 3090 Strix OC White", Description =  DescAsus3090, Chipset = (enuChipsets)3, Memory = 24, MemType = "GDDR6X", BoostClock = 1890, CoreClock = 1395, Length = 319, TDP = 350, HDMIPorts = 2, DPPorts = 3, MaxRes = "8K", Prix = 2449.99, Premium = true },
+                new Enfant { Id = 8, IdParent = 2, Nom = "RTX 3060 XC Black Gaming", Description = DescEVGA3060, Chipset = (enuChipsets)0, Memory = 12, MemType = "GDDR6", BoostClock = 1777, CoreClock = 1320, Length = 202, TDP = 170, HDMIPorts = 1, DPPorts = 3, MaxRes = "8K", Prix = 399.99, Premium = false },
+                new Enfant { Id = 9, IdParent = 2, Nom = "RTX 3070 FTW3 Ultra Gaming", Description = DescEVGA3070, Chipset = (enuChipsets)1, Memory = 8, MemType = "GDDR6", BoostClock = 1815, CoreClock = 1500, Length = 300, TDP = 220, HDMIPorts = 1, DPPorts = 3, MaxRes = "8K", Prix = 719.99, Premium = false },
+                new Enfant { Id = 10, IdParent = 2, Nom = "RTX 3080 FTW3 Ultra Gaming", Description = DescEVGA3080, Chipset = (enuChipsets)2, Memory = 10, MemType = "GDDR6X", BoostClock = 1800, CoreClock = 1440, Length = 300, TDP = 320, HDMIPorts = 1, DPPorts = 3, MaxRes = "8K", Prix = 919.99, Premium = false },
+                new Enfant { Id = 11, IdParent = 2, Nom = "RTX 3090 FTW3 Ultra Gaming", Description = DescEVGA3090, Chipset = (enuChipsets)3, Memory = 24, MemType = "GDDR6X", BoostClock = 1800, CoreClock = 1395, Length = 300, TDP = 350, HDMIPorts = 1, DPPorts = 3, MaxRes = "8K", Prix = 1919.99, Premium = true }
+
             };
 
             foreach (var p in Parents)
@@ -59,7 +60,7 @@ namespace prog_web_tp_2.Models
 
             foreach (var e in Enfants)
             {
-                e.Parent = Parents.Where(p => p.Id == e.IdParent).Single();
+                e.Parent = Parents.Single(p => p.Id == e.IdParent);
                 e.ImageURL = "/images/GPUs/" + e.Parent.Nom.Replace(' ', '-') + "/" + e.Nom.Replace(' ', '-') + "/" + e.Nom.Replace(' ', '-') + "-1.jpg";
             }
 

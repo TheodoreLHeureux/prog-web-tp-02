@@ -78,6 +78,11 @@ namespace prog_web_tp_2.Controllers
             return View("Recherche", new PageRechercheViewModel(criteres, donnees.ToList()));
         }
 
+        public IActionResult Detail()
+        {
+            return View();
+        }
+
         [Route("/enfant/detail/{id:int}")]
         [Route("/enfant/{id:int}")]
         [Route("/{id:int}")]
@@ -87,9 +92,9 @@ namespace prog_web_tp_2.Controllers
             Enfant e = DB.Enfants.SingleOrDefault(E => E.Id == Id);
 
             if (e != null)
-                return View(e);
+                return View("Detail", e);
 
-            return Redirect("/enfant/pagenotfound");
+            return View("PageNotFound");
         }
 
         [Route("/enfant/detail/{nom}")]
@@ -98,12 +103,12 @@ namespace prog_web_tp_2.Controllers
         [Route("/detail/{nom}")]
         public IActionResult DetailParNom(string nom)
         {
-            Enfant e = DB.Enfants.Single(E => E.Nom.Replace(' ', '_').ToLower() == nom);
+            Enfant e = DB.Enfants.SingleOrDefault(E => E.Nom.Replace(' ', '_').ToLower() == nom);
 
             if (e != null)
-                return View(e);
+                return View("Detail", e);
 
-            return Redirect("/enfant/pagenotfound");
+            return View("PageNotFound");
 
         }
 

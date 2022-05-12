@@ -6,6 +6,7 @@
     background-color: var(--color-3);
     width: 90%;
     border-radius: 10px;
+    min-height: 80vh;
 }
 
 img {

@@ -56,7 +56,7 @@
                 <li><b>Maximum resolution:</b> @GPU.MaxRes</li>
                 <li><b>Prix:</b> @GPU.Prix.ToString("0.00")$</li>
             </ul>
-            <form action="https://www.w3schools.com/action_page.php" method="post">
+            <form asp-controller="Favoris" asp-action="AjouterUnEnfant" method="post">
                 <input type="hidden" name="id" value="@GPU.Id">
                 <button type="submit" class="btn btn-primary">Favoris <i class="fas fa-plus"></i></button>
             </form>

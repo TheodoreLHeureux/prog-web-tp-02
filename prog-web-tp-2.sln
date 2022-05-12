@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prog-web-tp-2", "prog-web-tp-2.csproj", "{F0C60E98-C220-4EDC-A65E-9B12026B21B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "prog-web-tp-2", "prog-web-tp-2.csproj", "{F0C60E98-C220-4EDC-A65E-9B12026B21B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

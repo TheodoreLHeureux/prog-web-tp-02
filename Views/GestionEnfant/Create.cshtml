@@ -1,0 +1,122 @@
+﻿@model prog_web_tp_2.Models.Enfant
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+@section Style
+{
+
+    <link rel="stylesheet" href="/style/create.css">
+}
+
+<h1>Ajouter une carte graphique</h1>
+<hr />
+<div class="row">
+    <div class="col-md-8">
+        <form asp-action="Create">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="IdParent" class="control-label"></label>
+                    <select asp-for="IdParent"
+                            required
+                            class="form-control">
+                        <option value="">Choisir un parent ...</option>
+                        @foreach (Parent p in (List<Parent>)ViewData["Parents"])
+                        {
+                            <option value="@p.Id">@p.Nom</option>
+                        }
+                    </select>
+                    <span asp-validation-for="IdParent" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ImageURL" class="control-label"></label>
+                    <input asp-for="ImageURL" class="form-control"/>
+                    <span asp-validation-for="ImageURL" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Nom" class="control-label"></label>
+                    <input asp-for="Nom" class="form-control"/>
+                    <span asp-validation-for="Nom" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label"></label>
+                    <textarea asp-for="Description" class="form-control"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Chipset" class="control-label"></label>
+                    <select asp-for="Chipset"
+                            class="form-control"
+                            asp-items="Html.GetEnumSelectList<enuChipsets>()">
+                        <option>Choisir un chipset ...</option>
+                    </select>
+                    <span asp-validation-for="Chipset" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Memory" class="control-label"></label>
+                    <input asp-for="Memory" class="form-control"/>
+                    <span asp-validation-for="Memory" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MemType" class="control-label"></label>
+                    <input asp-for="MemType" class="form-control"/>
+                    <span asp-validation-for="MemType" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BoostClock" class="control-label"></label>
+                    <input asp-for="BoostClock" class="form-control"/>
+                    <span asp-validation-for="BoostClock" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label asp-for="CoreClock" class="control-label"></label>
+                    <input asp-for="CoreClock" class="form-control"/>
+                    <span asp-validation-for="CoreClock" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Length" class="control-label"></label>
+                    <input asp-for="Length" class="form-control"/>
+                    <span asp-validation-for="Length" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TDP" class="control-label"></label>
+                    <input asp-for="TDP" class="form-control"/>
+                    <span asp-validation-for="TDP" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="HDMIPorts" class="control-label"></label>
+                    <input asp-for="HDMIPorts" class="form-control"/>
+                    <span asp-validation-for="HDMIPorts" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DPPorts" class="control-label"></label>
+                    <input asp-for="DPPorts" class="form-control"/>
+                    <span asp-validation-for="DPPorts" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MaxRes" class="control-label"></label>
+                    <input asp-for="MaxRes" class="form-control"/>
+                    <span asp-validation-for="MaxRes" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Prix" class="control-label"></label>
+                    <input asp-for="Prix" class="form-control"/>
+                    <span asp-validation-for="Prix" class="text-danger"></span>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="Premium"/> @Html.DisplayNameFor(model => model.Premium)
+                    </label>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Créer" class="btn btn-primary"/>
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>

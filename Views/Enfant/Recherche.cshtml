@@ -16,15 +16,7 @@
         <div class="row">
             @foreach (Enfant e in Enfants)
             {
-                <div class="col-12 col-md-4 px-2 item">
-                    <div class="card">
-                        <img src="@e.ImageURL" class="card-img-top img-fluid" alt="@e.Nom">
-                        <div class="card-body">
-                            <h1 class="card-title">@e.Nom</h1>
-                            <a href="/Enfant/Detail/@e.Id" class="btn btn-primary">Details</a>
-                        </div>
-                    </div>
-                </div>
+                <partial name="_EnfantPartial" for="@e"/>
             }
             @if (Enfants.Count == 0)
             {
@@ -45,10 +37,6 @@
                         <p><b>Fabricant:</b></p>
                         <ul class="checklist">
                             <li>
-                                <input type="checkbox" @(Criteres.Asus && Criteres.Gigabyte && Criteres.EVGA ? "checked" : "") name="Tous" id="search-manufacturer-checklist-tous">
-                                <label for="search-manufacturer-checklist-tous">Tous</label>
-                            </li>
-                            <li>
                                 <input type="checkbox" @(Criteres.Asus ? "checked" : "") name="Asus" value="true" id="search-manufacturer-checklist-asus">
                                 <label for="search-manufacturer-checklist-asus">Asus</label>
                             </li>
@@ -65,11 +53,6 @@
                     <div class="checklist-container col-12 col-xxl-6" id="chipset">
                         <p><b>Chipset:</b></p>
                         <ul class="checklist">
-                            <li>
-                                <input type="checkbox" @(Criteres.Est3060 && Criteres.Est3070 && Criteres.Est3080 && Criteres.Est3090 ? "checked" : "") name="TousChipset" id="search-chipset-checklist-tous">
-                                <label for="search-chipset-checklist-tous">Tous</label>
-                            </li>
-    
                             <li>
                                 <input type="checkbox" @(Criteres.Est3060 ? "checked" : "") value="true" name="Est3060" id="search-chipset-checklist-3060">
                                 <label for="search-chipset-checklist-3060">GeForce RTX 3060</label>
@@ -100,9 +83,9 @@
                 <div id="premium-selector">
                     <label for="search-premium" id="label-premium">Article premium: </label>
                     <select name="ArticlePremium" id="search-premium" class="input-txt">
-                        <option @(Criteres.ArticlePremium == 0 ? "selected" : "") value="0">Peu importe</option>
-                        <option @(Criteres.ArticlePremium == 1 ? "selected" : "") value="1">Oui</option>
-                        <option @(Criteres.ArticlePremium == 2 ? "selected" : "") value="2">Non</option>
+                        <!option @(Criteres.ArticlePremium == 0 ? "selected" : "") value="0">Peu importe</!option>
+                        <!option @(Criteres.ArticlePremium == 1 ? "selected" : "") value="1">Oui</!option>
+                        <!option @(Criteres.ArticlePremium == 2 ? "selected" : "") value="2">Non</!option>
                     </select>
                 </div>
 
